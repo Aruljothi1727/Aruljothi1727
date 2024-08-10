@@ -1,0 +1,13 @@
+.upload{
+   display:'flex';
+   flex-direction:'row';
+   flex-wrap: nowrap;
+   background-color: aquamarine;
+   width: 500px;
+}
+.ant-upload-list{
+    float: right;
+    background-color: white;
+    color: black;
+    left: 300px;
+}

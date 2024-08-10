@@ -1,0 +1,11 @@
+.ant-list-items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+.ant-layout-content {
+ margin: 10px;
+}
