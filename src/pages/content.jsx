@@ -1,7 +1,7 @@
 import { Content } from "antd/es/layout/layout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from '../components/dashboard';
-import Courses from "../components/course";
+import Courses from "../courses/course";
 import Addcontent from "../components/addcontent";
 import ContentCreationComplete from '../components/contentcreationcomplete';
 import Assignmenttable from "../components/assignments";

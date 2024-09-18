@@ -3,9 +3,7 @@ import { Tabs } from 'antd';
 import Loginform from './loginform.jsx'
 import Registerform from './registerform.jsx';
 
-const onChange = (key) => {
-  console.log(key);
-};
+
 const items = [
   {
     key: '1',
@@ -23,6 +21,9 @@ const items = [
 ];
 const Login = () =>{
   return(
-  <Tabs defaultActiveKey="1" centered items={items} onChange={onChange} />);
+    <div className='login' style={{width:'100%', marginLeft:'auto',marginRight:'auto',height:'750px'}}>
+      <Tabs defaultActiveKey="1" centered items={items}  style={{width:'50%',marginLeft:'auto',marginRight:'auto',border:'1px solid white', height:'700px', backgroundColor:'white',opacity:'0.9'}} /> 
+      </div>
+    );
 }
 export default Login;

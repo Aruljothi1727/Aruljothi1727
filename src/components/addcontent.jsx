@@ -1,128 +1,103 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
-  Alert,
   Button,
-  Form,
-  Select,
-  Textarea,
-  Input,
   DatePicker,
-  InputNumber
+  Form,
+  Input,
+  Select,
 } from 'antd';
-import {  useNavigate } from 'react-router-dom';
-import { Option } from 'antd/es/mentions';
-const { RangePicker } = DatePicker;
+import { useNavigate } from 'react-router-dom';
+
+const { TextArea } = Input;
+const { Option } = Select;
 
 
-const formItemLayout = {
-  labelCol: {
-    xs: {
-      span: 24,
-    },
-    sm: {
-      span: 6,
-    },
-  },
-  wrapperCol: {
-    xs: {
-      span: 24,
-    },
-    sm: {
-      span: 14,
-    },
-  },
+const onFinishFailed = (errorInfo) => {
+  console.log('Failed:', errorInfo);
 };
-
 const Addcontent = () => {
 
   const [Content, setContent] = useState('SelectContent')
-  const [ContentFields, setContentFields] = useState('')
   const navigate = useNavigate();
+
+  const onFinish = (values) => {
+    console.log('Submitted Content:', Content, values);
+    navigate('/contentcreationcomplete')
+  };
 
   const handlechange = (value) => {
     setContent(value);
-    setContentFields({});
   }
-
-  const handleFieldChange = (name, value) => {
-    setContentFields({ ...ContentFields, [name]: value });
-  };
-
-  const Submit = (e) => {
-   
-    console.log("Submitted Content", Content, ContentFields);
-    navigate('/contentcreationcomplete')
-  }
- 
   return (
 
-    <div style={{margin:'20px', alignContent:'center', backgroundColor:'#e6f4ff'}}>
-       
-      <Form
-        {...formItemLayout}
-         variant="outlined"
-         style={{
-           maxWidth: 700,
-             margin:'10px'
-         }}    
+    <div style={{ margin: '20px', alignItems: 'center', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', alignContent: 'center' }}>
+          <Form
+        name="basic"
+        labelCol={{
+          span: 8,
+        }}
+        wrapperCol={{
+          span: 16,
+        }}
+        style={{
+          maxWidth: 550,
+        }}
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+        autoComplete="off"
       >
-        <Form.Item
-          // wrapperCol={{
-          //   offset:7,
-          //   span: 12,
-          // }}
-          label="Select Content:"
-          name="SelectContent"
-          rules={[
-            {
-              required: true,
-              message: 'Please input!',
-            },
-          ]}
-        >
-          <Select value={Content} onChange={handlechange}>
-            <Option value="">Select Content</Option>
-            <Option value="assignments">Assignments</Option>
-            <Option value="courses">Courses</Option>
-          </Select>
-        </Form.Item>
- 
+        <div style={{ margin: '20px' }}>
+          <Form.Item
+            label="Select Content:"
+            name="SelectContent"
+            rules={[
+              {
+                required: true,
+                message: 'Please input!',
+              },
+            ]}
+          >
+            <Select placeholder='Select Content' value={Content} onChange={handlechange}>
+              <Option value="selectcontent">Select Content</Option>
+              <Option value="courses">Courses</Option>
+              <Option value="assignments">Assignments</Option>
+            </Select>
+          </Form.Item>
+        </div>
+
         {Content === 'courses' ?
           <>
-            <Form.Item label="Course ID"
-              name="courseid"
-
+            <Form.Item
+              label="Course Id"
+              name="couseid"
               rules={[
                 {
                   required: true,
-                  message: 'Please input!',
-
+                  message: 'Please input your username!',
                 },
               ]}
             >
-              <Input
-                name='courseid'
-                value={ContentFields.courseid ||''}
-                onChange={(e) => handleFieldChange(e.target.name, e.target.value)} />
+              <Input />
             </Form.Item>
 
             <Form.Item
               label="Course Name"
-              name="courseName"
+              name="coursename"
               rules={[
                 {
                   required: true,
-                  message: 'Please input!',
+                  message: 'Please input your password!',
                 },
               ]}
             >
-              <Input
-                name='coursename'
-                value={ContentFields.coursename}
-                onChange={(e) => handleFieldChange(e.target.name, e.target.value)} />
+              <Input />
             </Form.Item>
 
-            <Form.Item label="Course Start Date"
+            <Form.Item
+              label="Course Start Date"
               name="coursestartdate"
               rules={[
                 {
@@ -131,14 +106,11 @@ const Addcontent = () => {
                 },
               ]}
             >
-              <DatePicker
-              //   name='coursestartdate'
-              //  value={ContentFields.coursestartdate}
-               onChange={(e) => handleFieldChange(e.target.name, e.target.value)}
-                />
+              <DatePicker />
             </Form.Item>
 
-            <Form.Item label="Course End Date"
+            <Form.Item
+              label="Course End Date"
               name="courseenddate"
               rules={[
                 {
@@ -147,11 +119,7 @@ const Addcontent = () => {
                 },
               ]}
             >
-              <DatePicker
-              //   name='courseenddate'
-              //  value={ContentFields.courseenddate}
-              //  onChange={(e) => handleFieldChange(e.target.name, e.target.value)}
-              />
+              <DatePicker />
             </Form.Item>
             <Form.Item label="Fees"
               name="fees"
@@ -162,15 +130,14 @@ const Addcontent = () => {
                 },
               ]}
             >
-              <Input
-                name='fees'
-                value={ContentFields.fees}
-                onChange={(e) => handleFieldChange(e.target.name, e.target.value)} />
+              <Input />
             </Form.Item>
           </>
-          :
 
-          <div>
+          : ''}
+
+        {Content === 'assignments' ?
+          <>
             <Form.Item
               label="Asssignment ID"
               name="assignmentid"
@@ -181,11 +148,7 @@ const Addcontent = () => {
                 },
               ]}
             >
-              <Input
-                name='assignmentid'
-                value={ContentFields.assignmentid}
-                onChange={(e) => handleFieldChange(e.target.name, e.target.value)}
-              />
+              <Input />
             </Form.Item>
 
             <Form.Item
@@ -198,11 +161,8 @@ const Addcontent = () => {
                 },
               ]}
             >
-              <Input
-                name='assignmentname'
-                value={ContentFields.assignmentname}
-                onChange={(e) => handleFieldChange(e.target.name, e.target.value)}
-              />
+              <Input />
+
             </Form.Item>
 
             <Form.Item
@@ -215,11 +175,7 @@ const Addcontent = () => {
                 },
               ]}
             >
-              <Input.TextArea
-                name='assigntmenquestion'
-                value={ContentFields.assigntmentquestion}
-                onChange={(e) => handleFieldChange(e.target.name, e.target.value)}
-              />
+              <Input.TextArea />
             </Form.Item>
 
             <Form.Item
@@ -232,26 +188,24 @@ const Addcontent = () => {
                 },
               ]}
             >
-              <DatePicker
-                name='submissiondate'
-                value={ContentFields.submissiondate}
-                onChange={(e) => handleFieldChange(e.target.name, e.target.value)}
-              />
-
+              <DatePicker />
             </Form.Item>
+          </>
+          : ''}
 
-          </div>
-        }
         <Form.Item
           wrapperCol={{
-            offset: 6,
+            offset: 8,
             span: 16,
           }}
         >
-          <Button type='primary' htmlType='submit' onClick={Submit}>Submit</Button>
-          </Form.Item>
-                  </Form>
+          <Button type="primary" htmlType="submit">
+            Submit
+          </Button>
+        </Form.Item>
+      </Form>
     </div>
+
   );
 
 }

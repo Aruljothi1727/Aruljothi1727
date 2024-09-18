@@ -42,10 +42,13 @@ const Mainlayout = () => {
           <Footer
           style={{
             textAlign: 'center', padding: 0,
-            margin:0
+            margin:0,
+            fontSize:'16px',
+            height:'40px',
+            alignContent:'center'
           }}
         >
-          Cloud Technology ©{new Date().getFullYear()} Created by Aruljothi
+       Cloud Technology ©{new Date().getFullYear()} Created by Aruljothi
         </Footer>
       </Layout>
       </Layout>

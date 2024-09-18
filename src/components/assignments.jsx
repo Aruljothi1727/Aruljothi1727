@@ -1,8 +1,7 @@
 import React from 'react';
 import { Space, Table, Tag, Button } from 'antd';
+import {useNavigate} from 'react-router-dom';
 import '../css/assignment.css'
-import {Navigate,useNavigate} from 'react-router-dom';
-
 const Assignmenttable = () =>{
   const navigate = useNavigate();
 

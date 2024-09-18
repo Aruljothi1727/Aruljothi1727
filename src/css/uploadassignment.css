@@ -1,13 +1,32 @@
-.upload{
+/* .upload{
    display:'flex';
    flex-direction:'row';
    flex-wrap: nowrap;
    background-color: aquamarine;
    width: 500px;
-}
-.ant-upload-list{
+} */
+/* .ant-upload-list{
     float: right;
     background-color: white;
     color: black;
     left: 300px;
+} */
+.upload{
+    display: inline-block;
+    width: 1000px;
+    height: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ant-upload-wrapper{
+    display: inline-flex;
+    margin:10px;
+    text-align: center;
+    
+}
+.ant-upload-list {
+    margin:10px;
+    background-color: white;
+    width: max-content;
 }

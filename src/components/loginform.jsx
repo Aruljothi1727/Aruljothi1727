@@ -18,7 +18,7 @@ function Loginform  () {
   };
 
   return(
-  <div style={{display:'flex', flexDirection:'column',alignItems:'center', height:'700px', marginTop:'50px'}}>
+  <div style={{display:'flex', flexDirection:'column',alignItems:'center', height:'700px', marginTop:'10px'}}>
   <div style={{margin:'3px', backgroundColor:'white',width:'500px',alignItems:'center', border:'1px solid lightgrey'}}>
    <div><img  style={{ display:'block', marginLeft:'auto', marginRight:'auto',width:'60%',marginTop:'20px',marginBottom:'20px'}} src={loginpage} /></div>
   <Form 
