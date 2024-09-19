@@ -4,38 +4,37 @@ import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../css/course.css';
-import react from '../asset/course/react.jpeg';
-import angular from '../asset/course/angular.jpeg';
-import nextjs from '../asset/course/nextjs.jpeg';
-import nodejs from '../asset/course/nodejs.png';
-import js from '../asset/course/js.png';
+import docker from '../asset/course/docker.jpg';
+import git from '../asset/course/git.png';
+import kubernetes from '../asset/course/kubernetes.jpg';
+import github from '../asset/course/github.jpg';
+import prompt from '../asset/course/prompt.jpg';
 
-const reactdata = [
+const dockerdata = [
   {
-    title: 'React JS-The Complete Guide 2024',
-    name: 'Mathiarasan',
+    title: 'Docker for Developers and DevOps',
+    name: 'Luke Angel',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   },
   {
-    title: 'Modern React with Redux',
-    name: 'Stephen Grider',
+    title: 'Docker Course from Basics to Advanced',
+    name: 'EdYoda for Business',
     starrating: '4.1',
     textrating: '4.1',
-    price: '₹599'
-  },
-  {
-    title: 'React JS- Complete Guide for Frontend Web Development',
-    name: 'Yihua Zhang',
-    starrating: '4.3',
-    textrating: '4.3',
     price: '₹549'
   },
   {
-    title: 'Node with React:Fullstack Web Development',
-    name: 'Stephen Grider',
+    title: 'Introduction to Docker',
+    name: 'Stone River eLearning',
+    starrating: '4.3',
+    textrating: '4.3',
+    price: '₹399'
+  },
+  {
+    title: 'Docker for .NET Apps',
+    name: 'Elton Stoneman',
     starrating: '4.1',
     textrating: '4.1',
     price: '₹499'
@@ -43,155 +42,156 @@ const reactdata = [
 ];
 
 
-const angulardata = [
+const gitdata = [
   {
-    title: 'Angular-The Complete Guide 2024',
-    name: 'Maximilian',
+    title: 'Git from Basics to Advanced',
+    name: 'Andrii',
     starrating: '4.5',
     textrating: '4.5',
-    price: '₹599'
+    price: '₹549'
 
   },
   {
-    title: 'Angular 8 Certification Training',
-    name: 'Uplatz Training',
+    title: 'The Git & Github Bootcamp',
+    name: 'Colt Steele',
+    starrating: '4',
+    textrating: '4',
+    price: '₹599'
+  },
+  {
+    title: 'Git and GitHub for Writers',
+    name: 'Peter',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹499'
+  },
+  {
+    title: 'Git Masterclass',
+    name: 'Codestars',
+    starrating: '3.5',
+    textrating: '3.5',
+    price: '₹599'
+  }
+];
+
+const kubernetesdata = [
+  {
+    title: 'Practical Kubernetes Guide',
+    name: 'KodeKloud Training',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹549'
+
+  },
+  {
+    title: "Kubernetes for developers",
+    name: 'Houssem Dellai',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   },
   {
-    title: 'The Moddern Angular Bootcamp',
-    name: 'Stephen Grider',
+    title: 'Kubernetes from A to Z',
+    name: 'Stefan Thorpe',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   },
   {
-    title: 'Angular Front to Back',
-    name: 'Brad Traversey',
+    title: 'Ultimate Kubernetes Fast-Track',
+    name: 'Wrap 9 Training',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   }
 ];
 
-const nextjsdata = [
+const githubdata = [
   {
-    title: 'Next.js 14',
-    name: 'Maximillian',
+    title: 'GitHub Ultimate: Master Git',
+    name: 'John Myers',
     starrating: '4.5',
     textrating: '4.5',
-    price: '₹599'
+    price: '₹549'
 
   },
   {
-    title: "Next JS From ScraReact JStch",
-    name: 'Stephen Grider',
+    title: 'Master Git and Github - Beginner to Expert',
+    name: 'Anisul Islam',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   },
   {
-    title: 'Next.js by Example',
-    name: 'Mirko Nasato',
+    title: 'GitHub Actions - The Complete Guide',
+    name: 'Maximilian Schwarmuller',
     starrating: '4.5',
     textrating: '4.5',
-    price: '₹599'
+    price: '₹499'
   },
   {
-    title: 'TypeScript & Next.js 14',
-    name: 'Jacob Lower',
+    title: 'GitHub Beginners crash course',
+    name: 'BlueLime Learning Solutions',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   }
 ];
 
-const nodejsdata = [
+const promptdata = [
   {
-    title: 'Learn and Understand NodeJS',
-    name: 'Anthony',
-    starrating: '4.5',
-    textrating: '4.5',
+    title: 'Prompt Engineering 101',
+    name: 'Kyle Nielson',
+    starrating: '4',
+    textrating: '4',
     price: '₹599'
 
   },
   {
-    title: 'Node with React:Fullstack Development',
-    name: 'Stephen Grider',
+    title: 'Prompt Engineering Mastery',
+    name: 'Gregor Maric',
     starrating: '4.5',
     textrating: '4.5',
+    price: '₹549'
+  },
+  {
+    title: 'Fundamentals of Prompt Engineering',
+    name: 'Lucas whitaker',
+    starrating: '3.5',
+    textrating: '3.5',
     price: '₹599'
   },
   {
-    title: 'Node JS:Advanced Concepts',
-    name: 'Pierre-Henry Soria',
+    title: 'Prompt Engineering for Beginners',
+    name: 'Evan Wheeler',
     starrating: '4.5',
     textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Understanding Node.js:Core Concepts',
-    name: 'Mathiarasan',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
+    price: '₹499'
   }
 ];
 
-const jsdata = [
-  {
-    title: 'JavaScript-The Complete Guide 2024',
-    name: 'Brad Traversy',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-
-  },
-  {
-    title: 'JavaScript for Beginners',
-    name: 'Yassin Marco',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Modern JavaScript',
-    name: 'Jonas',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Master JavaScript from Basics to Advance',
-    name: 'EdYoda',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  }
-];
-
-function Arrow(props) {
-  const { className,style, onClick } = props;
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      // style={{ ...style, display: "block", background: "black" ,width:'30px',height:'30px'}}
+      style={{ ...style, display: "block", top: '25%', backgroundColor: 'black' }}
       onClick={onClick}
     />
   );
 }
 
 function SamplePrevArrow(props) {
-  const { className,style, onClick } = props;
+  const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      // style={{ ...style, display: "block", background: "black" }}
+      style={{ ...style, display: "block", top: '25%', backgroundColor: 'black' }}
       onClick={onClick}
     />
   );
 }
+
 
 function Softwaredevelopmenttabcontent() {
 
@@ -201,8 +201,8 @@ function Softwaredevelopmenttabcontent() {
     speed: 600,
     slidesToShow: 5,
     slidesToScroll: 1,
-    prevArrow: <SamplePrevArrow></SamplePrevArrow>,
-    nextArrow: <Arrow></Arrow>
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />
   };
   var cardsettings = {
     dots: false,
@@ -210,11 +210,11 @@ function Softwaredevelopmenttabcontent() {
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: <SamplePrevArrow></SamplePrevArrow>,
-    nextArrow: <Arrow></Arrow>
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />
   };
 
-  const [activetab, SetActivetab] = useState('React JS')
+  const [activetab, SetActivetab] = useState('Docker')
 
   const handletabchange = (tab) => {
     SetActivetab(tab)
@@ -227,11 +227,11 @@ function Softwaredevelopmenttabcontent() {
 
         <Slider {...settings}>
 
-          <Button type="primary"  {...activetab === 'React JS' ? activetab : ''} onClick={() => handletabchange('React JS')}>React JS</Button>
-          <Button type="primary"  {...activetab === 'Angular' ? activetab : ''} onClick={() => handletabchange('Angular')}>Angular</Button>
-          <Button type="primary"  {...activetab === 'Next.Js' ? activetab : ''} onClick={() => handletabchange('Next Js')}>Next Js</Button>
-          <Button type="primary"  {...activetab === 'Node.js' ? activetab : ''} onClick={() => handletabchange('Node.js')}>Node.js </Button>
-          <Button type="primary"  {...activetab === 'Node.js' ? activetab : ''} onClick={() => handletabchange('Javascript')}>Javascript</Button>
+          <Button type="primary"  {...activetab === 'Docker' ? activetab : ''} onClick={() => handletabchange('Docker')}>Docker</Button>
+          <Button type="primary"  {...activetab === 'Git' ? activetab : ''} onClick={() => handletabchange('Git')}>Git</Button>
+          <Button type="primary"  {...activetab === 'Kubernetes' ? activetab : ''} onClick={() => handletabchange('Kubernetes')}>Kubernetes</Button>
+          <Button type="primary"  {...activetab === 'GitHub' ? activetab : ''} onClick={() => handletabchange('GitHub')}>GitHub </Button>
+          <Button type="primary"  {...activetab === 'Prompt Engineering' ? activetab : ''} onClick={() => handletabchange('Prompt Engineering')}>Prompt Engineering</Button>
 
         </Slider>
 
@@ -240,87 +240,87 @@ function Softwaredevelopmenttabcontent() {
 
       <div>
 
-        {activetab === 'React JS' && (
-           
+        {activetab === 'Docker' && (
+
           <Slider {...cardsettings}>
-              {reactdata.map((d) => (
-              <Card 
-                cover={<img src={react} alt='' width={40} height={200}></img>}>
-                <div style={{ display: 'flex', flexDirection: 'column'}}>
-                  <Link href="https://ant.design" target="blank"><div style={{ fontSize: '20px', color: 'black'}}>{d.title}</div></Link>
+            {dockerdata.map((d) => (
+              <Card
+                cover={<img src={docker} alt='' width={40} height={200}></img>}>
+                <div style={{ display: 'flex', flexDirection: 'column',overflow:'hidden' }}>
+                  <Link href="https://ant.design" target="blank"><div style={{ fontSize: '20px', color: 'black' }}>{d.title}</div></Link>
                   <div style={{ fontSize: '18px' }}>{d.name}</div>
                   <div style={{ display: 'flex', flexDirection: 'row', fontWeight: 'bold' }}>{d.textrating}<Rate disabled defaultValue={d.starrating} /></div>
                   <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{d.price}</div>
                 </div>
               </Card>
             ))}
-           
+
           </Slider>)}
 
-        {activetab === 'Angular' && (
+        {activetab === 'Git' && (
           <Slider {...cardsettings}>
-          {angulardata.map((d) => (
-            <Card
-              cover={<img src={angular} alt='' width={50} height={150}></img>}>
-              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black' }}>{d.title}</div></Link>
-                <div style={{ fontSize: '18px' }}>{d.name}</div>
-                <div style={{ display: 'flex', flexDirection: 'row', fontWeight: 'bold' }}>{d.textrating}<Rate disabled defaultValue={d.starrating} /></div>
-                <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{d.price}</div>
-              </div>
-            </Card>
-          ))}
-        </Slider>
+            {gitdata.map((d) => (
+              <Card
+                cover={<img src={git} alt='' width={50} height={200}></img>}>
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black' }}>{d.title}</div></Link>
+                  <div style={{ fontSize: '18px' }}>{d.name}</div>
+                  <div style={{ display: 'flex', flexDirection: 'row', fontWeight: 'bold' }}>{d.textrating}<Rate disabled defaultValue={d.starrating} /></div>
+                  <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{d.price}</div>
+                </div>
+              </Card>
+            ))}
+          </Slider>
 
         )}
-        {activetab === 'Next Js' && (
+        {activetab === 'Kubernetes' && (
           <Slider {...cardsettings}>
-          {nextjsdata.map((d) => (
-            <Card
-              cover={<img src={nextjs} alt='' width={50} height={150}></img>}>
-              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black' }}>{d.title}</div></Link>
-                <div style={{ fontSize: '18px' }}>{d.name}</div>
-                <div style={{ display: 'flex', flexDirection: 'row', fontWeight: 'bold' }}>{d.textrating}<Rate disabled defaultValue={d.starrating} /></div>
-                <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{d.price}</div>
-              </div>
-            </Card>
-          ))}
-        </Slider>
-          )}
+            {kubernetesdata.map((d) => (
+              <Card
+                cover={<img src={kubernetes} alt='' width={50} height={200}></img>}>
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black' }}>{d.title}</div></Link>
+                  <div style={{ fontSize: '18px' }}>{d.name}</div>
+                  <div style={{ display: 'flex', flexDirection: 'row', fontWeight: 'bold' }}>{d.textrating}<Rate disabled defaultValue={d.starrating} /></div>
+                  <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{d.price}</div>
+                </div>
+              </Card>
+            ))}
+          </Slider>
+        )}
 
 
-        {activetab === 'Node.js' && (
-          
+        {activetab === 'GitHub' && (
+
           <Slider {...cardsettings}>
-          {nodejsdata.map((d) => (
-            <Card
-              cover={<img src={nodejs} alt='' width={50} height={150}></img>}>
-              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black'}}>{d.title}</div></Link>
-                <div style={{ fontSize: '18px' }}>{d.name}</div>
-                <div style={{ display: 'flex', flexDirection: 'row', fontWeight: 'bold' }}>{d.textrating}<Rate disabled defaultValue={d.starrating} /></div>
-                <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{d.price}</div>
-              </div>
-            </Card>
-          ))}
-        </Slider>
-      )}
+            {githubdata.map((d) => (
+              <Card
+                cover={<img src={github} alt='' width={50} height={200}></img>}>
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black' }}>{d.title}</div></Link>
+                  <div style={{ fontSize: '18px' }}>{d.name}</div>
+                  <div style={{ display: 'flex', flexDirection: 'row', fontWeight: 'bold' }}>{d.textrating}<Rate disabled defaultValue={d.starrating} /></div>
+                  <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{d.price}</div>
+                </div>
+              </Card>
+            ))}
+          </Slider>
+        )}
 
-        {activetab === 'Javascript' && (
-         <Slider {...cardsettings}>
-         {jsdata.map((d) => (
-           <Card
-             cover={<img src={js} alt='' width={50} height={150}></img>}>
-             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-               <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black'}}>{d.title}</div></Link>
-               <div style={{ fontSize: '18px' }}>{d.name}</div>
-               <div style={{ display: 'flex', flexDirection: 'row', fontWeight: 'bold' }}>{d.textrating}<Rate disabled defaultValue={d.starrating} /></div>
-               <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{d.price}</div>
-             </div>
-           </Card>
-         ))}
-       </Slider>)}
+        {activetab === 'Prompt Engineering' && (
+          <Slider {...cardsettings}>
+            {promptdata.map((d) => (
+              <Card
+                cover={<img src={prompt} alt='' width={50} height={200}></img>}>
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black' }}>{d.title}</div></Link>
+                  <div style={{ fontSize: '18px' }}>{d.name}</div>
+                  <div style={{ display: 'flex', flexDirection: 'row', fontWeight: 'bold' }}>{d.textrating}<Rate disabled defaultValue={d.starrating} /></div>
+                  <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{d.price}</div>
+                </div>
+              </Card>
+            ))}
+          </Slider>)}
 
       </div>
     </div>

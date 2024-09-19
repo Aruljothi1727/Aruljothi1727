@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, Button } from "antd";
 import { Typography } from 'antd';
-import '../css/course.css'
+import '../css/course.css';
 import Webtabcontent from './webdevelopment';
 import Datasciencetabcontent from './datascience';
 import Mobiletabcontent from './mobiledevelopement';
@@ -52,18 +52,10 @@ const Courses = () => {
         <h2 style={{ marginBottom: '1px' }}>Our Courses Featured</h2>
         <h5 style={{ marginTop: '1px' }}>20K Students are enrolled</h5>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'row', gap: '5px', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
-        <Button style={{ color: 'white', backgroundColor: '#6659e7', borderRadius: '5px' }}>All categories</Button>
-        <Button style={{ color: 'white', backgroundColor: '#6659e7', borderRadius: '5px' }}>Design</Button>
-        <Button style={{ color: 'white', backgroundColor: '#6659e7', borderRadius: '5px' }}>Programming</Button>
-        <Button style={{ color: 'white', backgroundColor: '#6659e7', borderRadius: '5px' }}>Digital Marketing</Button>
-        <Button style={{ color: 'white', backgroundColor: '#6659e7', borderRadius: '5px' }}> IT</Button>
-      </div>
+      
 
       <div style={{marginTop:'20px'}}>
       <Tabs centered defaultActiveKey="1" items={items} />
-
-
       </div>
 
 

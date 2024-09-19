@@ -5,189 +5,188 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../css/course.css';
-import react from '../asset/course/react.jpeg';
-import angular from '../asset/course/angular.jpeg';
-import nextjs from '../asset/course/nextjs.jpeg';
-import nodejs from '../asset/course/nodejs.png';
-import js from '../asset/course/js.png';
+import selenium from '../asset/course/selenium.jpg';
+import postman from '../asset/course/postman.jpg';
+import api from '../asset/course/apitesting.jpeg';
+import java from '../asset/course/java.jpg';
+import automation from '../asset/course/automation.jpeg';
 
-const reactdata = [
+const seleniumdata = [
   {
-    title: 'React JS-The Complete Guide 2024',
-    name: 'Mathiarasan',
+    title: 'Selenium Automation Testing with Python',
+    name: 'Phil Ebiner',
     starrating: '4.5',
     textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Modern React with Redux',
-    name: 'Stephen Grider',
-    starrating: '4.1',
-    textrating: '4.1',
-    price: '₹599'
-  },
-  {
-    title: 'React JS- Complete Guide for Frontend Web Development',
-    name: 'Yihua Zhang',
-    starrating: '4.3',
-    textrating: '4.3',
     price: '₹549'
   },
   {
-    title: 'Node with React:Fullstack Web Development',
-    name: 'Stephen Grider',
-    starrating: '4.1',
-    textrating: '4.1',
+    title: 'Test Automation Using Selenium WebDriver',
+    name: 'Ganesh Sahai',
+    starrating: '4',
+    textrating: '4',
     price: '₹499'
+  },
+  {
+    title: 'New Selenium IDE',
+    name: 'Arun Motoori',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹599'
+  },
+  {
+    title: 'Selenium with Python',
+    name: 'Nilesh Wadkar',
+    starrating: '4',
+    textrating: '4',
+    price: '₹399'
   }
 ];
 
 
-const angulardata = [
+const postmandata = [
   {
-    title: 'Angular-The Complete Guide 2024',
-    name: 'Maximilian',
+    title: 'Postman: The Complete Guide',
+    name: 'Valentin Despa',
     starrating: '4.5',
     textrating: '4.5',
-    price: '₹599'
+    price: '₹549'
 
   },
   {
-    title: 'Angular 8 Certification Training',
+    title: 'Quick Introduction to Postman',
     name: 'Uplatz Training',
+    starrating: '4',
+    textrating: '4',
+    price: '₹499'
+  },
+  {
+    title: 'Postman Tutorial: Getting Started with API Testing',
+    name: 'Praveenkumar',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   },
   {
-    title: 'The Moddern Angular Bootcamp',
-    name: 'Stephen Grider',
+    title: 'Learn Postman from Beginner to Advanced',
+    name: 'Ayush Kumar',
+    starrating: '5',
+    textrating: '5',
+    price: '₹599'
+  }
+];
+
+const apidata = [
+  {
+    title: 'API Developer',
+    name: 'Bluelime Learning Solutions',
     starrating: '4.5',
     textrating: '4.5',
-    price: '₹599'
+    price: '₹499'
   },
   {
-    title: 'Angular Front to Back',
-    name: 'Brad Traversey',
+    title: 'API and Web Service Introduction',
+    name: 'Nate Ross',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹549'
+  },
+  {
+    title: "REST API for beginners",
+    name: 'Denis Buchel',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹499'
+  },
+   {
+    title: 'Build a RESTful API with Node.js',
+    name: 'Bluelime Learning Solutions',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   }
 ];
 
-const nextjsdata = [
+const javadata = [
   {
-    title: 'Next.js 14',
-    name: 'Maximillian',
+    title: 'Java for Absolute Beginners',
+    name: 'Nick H',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
 
   },
   {
-    title: "Next JS From ScraReact JStch",
-    name: 'Stephen Grider',
+    title: 'Practice Java by Building Projects',
+    name: 'Tim Short',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   },
   {
-    title: 'Next.js by Example',
-    name: 'Mirko Nasato',
+    title: 'Java for Testers',
+    name: 'Dmitry Shyshkin',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹499'
+  },
+  {
+    title: 'Become a Junior Java Software Developer',
+    name: 'Tim Short',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹549'
+  }
+];
+
+const automationdata = [
+  {
+    title: 'Test Automation Foundations',
+    name: 'Ozan llhan',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹549'
+
+  },
+  {
+    title: 'Automated Web Testing with JavaScript',
+    name: 'Rick Schubert',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   },
   {
-    title: 'TypeScript & Next.js 14',
-    name: 'Jacob Lower',
+    title: 'Test Automation from scratch',
+    name: 'IT Room',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹499'
+  },
+  {
+    title: 'Roadmap to become a Test Automation Engineer',
+    name: 'Ambreen Khan',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   }
 ];
 
-const nodejsdata = [
-  {
-    title: 'Learn and Understand NodeJS',
-    name: 'Anthony',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-
-  },
-  {
-    title: 'Node with React:Fullstack Development',
-    name: 'Stephen Grider',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Node JS:Advanced Concepts',
-    name: 'Pierre-Henry Soria',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Understanding Node.js:Core Concepts',
-    name: 'Mathiarasan',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  }
-];
-
-const jsdata = [
-  {
-    title: 'JavaScript-The Complete Guide 2024',
-    name: 'Brad Traversy',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-
-  },
-  {
-    title: 'JavaScript for Beginners',
-    name: 'Yassin Marco',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Modern JavaScript',
-    name: 'Jonas',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Master JavaScript from Basics to Advance',
-    name: 'EdYoda',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  }
-];
-
-function Arrow(props) {
-  const { className,style, onClick } = props;
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      // style={{ ...style, display: "block", background: "black" ,width:'30px',height:'30px'}}
+      style={{ ...style, display: "block", top: '25%', backgroundColor: 'black' }}
       onClick={onClick}
     />
   );
 }
 
 function SamplePrevArrow(props) {
-  const { className,style, onClick } = props;
+  const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      // style={{ ...style, display: "block", background: "black" }}
+      style={{ ...style, display: "block", top: '25%', backgroundColor: 'black' }}
       onClick={onClick}
     />
   );
@@ -201,8 +200,8 @@ function Softwaretestingtabcontent() {
     speed: 600,
     slidesToShow: 5,
     slidesToScroll: 1,
-    prevArrow: <SamplePrevArrow></SamplePrevArrow>,
-    nextArrow: <Arrow></Arrow>
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />
   };
   var cardsettings = {
     dots: false,
@@ -210,11 +209,11 @@ function Softwaretestingtabcontent() {
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: <SamplePrevArrow></SamplePrevArrow>,
-    nextArrow: <Arrow></Arrow>
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />
   };
 
-  const [activetab, SetActivetab] = useState('React JS')
+  const [activetab, SetActivetab] = useState('Selenium WebDriver')
 
   const handletabchange = (tab) => {
     SetActivetab(tab)
@@ -227,11 +226,11 @@ function Softwaretestingtabcontent() {
 
         <Slider {...settings}>
 
-          <Button type="primary"  {...activetab === 'React JS' ? activetab : ''} onClick={() => handletabchange('React JS')}>React JS</Button>
-          <Button type="primary"  {...activetab === 'Angular' ? activetab : ''} onClick={() => handletabchange('Angular')}>Angular</Button>
-          <Button type="primary"  {...activetab === 'Next.Js' ? activetab : ''} onClick={() => handletabchange('Next Js')}>Next Js</Button>
-          <Button type="primary"  {...activetab === 'Node.js' ? activetab : ''} onClick={() => handletabchange('Node.js')}>Node.js </Button>
-          <Button type="primary"  {...activetab === 'Node.js' ? activetab : ''} onClick={() => handletabchange('Javascript')}>Javascript</Button>
+          <Button type="primary"  {...activetab === 'Selenium WebDriver' ? activetab : ''} onClick={() => handletabchange('Selenium WebDriver')}>Selenium WebDriver</Button>
+          <Button type="primary"  {...activetab === 'Postman' ? activetab : ''} onClick={() => handletabchange('Postman')}>Postman</Button>
+          <Button type="primary"  {...activetab === 'API Testing' ? activetab : ''} onClick={() => handletabchange('API Testing')}>API Testing</Button>
+          <Button type="primary"  {...activetab === 'Java' ? activetab : ''} onClick={() => handletabchange('Java')}>Java</Button>
+          <Button type="primary"  {...activetab === 'Automation Testing' ? activetab : ''} onClick={() => handletabchange('Automation Testing')}>Automation Testing</Button>
 
         </Slider>
 
@@ -240,12 +239,12 @@ function Softwaretestingtabcontent() {
 
       <div>
 
-        {activetab === 'React JS' && (
+        {activetab === 'Selenium WebDriver' && (
            
           <Slider {...cardsettings}>
-              {reactdata.map((d) => (
+              {seleniumdata.map((d) => (
               <Card 
-                cover={<img src={react} alt='' width={40} height={200}></img>}>
+                cover={<img src={selenium} alt='' width={40} height={200}></img>}>
                 <div style={{ display: 'flex', flexDirection: 'column'}}>
                   <Link href="https://ant.design" target="blank"><div style={{ fontSize: '20px', color: 'black'}}>{d.title}</div></Link>
                   <div style={{ fontSize: '18px' }}>{d.name}</div>
@@ -257,11 +256,11 @@ function Softwaretestingtabcontent() {
            
           </Slider>)}
 
-        {activetab === 'Angular' && (
+        {activetab === 'Postman' && (
           <Slider {...cardsettings}>
-          {angulardata.map((d) => (
+          {postmandata.map((d) => (
             <Card
-              cover={<img src={angular} alt='' width={50} height={150}></img>}>
+              cover={<img src={postman} alt='' width={50} height={200}></img>}>
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black' }}>{d.title}</div></Link>
                 <div style={{ fontSize: '18px' }}>{d.name}</div>
@@ -273,11 +272,11 @@ function Softwaretestingtabcontent() {
         </Slider>
 
         )}
-        {activetab === 'Next Js' && (
+        {activetab === 'API Testing' && (
           <Slider {...cardsettings}>
-          {nextjsdata.map((d) => (
+          {apidata.map((d) => (
             <Card
-              cover={<img src={nextjs} alt='' width={50} height={150}></img>}>
+              cover={<img src={api} alt='' width={50} height={200}></img>}>
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black' }}>{d.title}</div></Link>
                 <div style={{ fontSize: '18px' }}>{d.name}</div>
@@ -290,12 +289,12 @@ function Softwaretestingtabcontent() {
           )}
 
 
-        {activetab === 'Node.js' && (
+        {activetab === 'Java' && (
           
           <Slider {...cardsettings}>
-          {nodejsdata.map((d) => (
+          {javadata.map((d) => (
             <Card
-              cover={<img src={nodejs} alt='' width={50} height={150}></img>}>
+              cover={<img src={java} alt='' width={50} height={200}></img>}>
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black'}}>{d.title}</div></Link>
                 <div style={{ fontSize: '18px' }}>{d.name}</div>
@@ -307,11 +306,11 @@ function Softwaretestingtabcontent() {
         </Slider>
       )}
 
-        {activetab === 'Javascript' && (
+        {activetab === 'Automation Testing' && (
          <Slider {...cardsettings}>
-         {jsdata.map((d) => (
+         {automationdata.map((d) => (
            <Card
-             cover={<img src={js} alt='' width={50} height={150}></img>}>
+             cover={<img src={automation} alt='' width={50} height={200}></img>}>
              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                <Link href="https://ant.design" target="_blank"><div style={{ fontSize: '20px', color: 'black'}}>{d.title}</div></Link>
                <div style={{ fontSize: '18px' }}>{d.name}</div>

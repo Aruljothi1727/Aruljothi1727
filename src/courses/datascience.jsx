@@ -13,29 +13,29 @@ import '../css/course.css'
 
 const machinelearningdata = [
   {
-    title: 'React JS-The Complete Guide 2024',
-    name: 'Mathiarasan',
+    title: 'Learn Machine Learning in 21 Days',
+    name: 'Code Warriors',
+    starrating: '4.3',
+    textrating: '4.3',
+    price: '₹499'
+  },
+  {
+    title: 'Introduction to Machine Learning',
+    name: 'Backyard Data Scientist',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   },
   {
-    title: 'Modern React with Redux',
+    title: 'Machine Learning with Javascript',
     name: 'Stephen Grider',
-    starrating: '4.1',
-    textrating: '4.1',
-    price: '₹599'
-  },
-  {
-    title: 'React JS- Complete Guide for Frontend Web Development',
-    name: 'Yihua Zhang',
-    starrating: '4.3',
-    textrating: '4.3',
+    starrating: '4.4',
+    textrating: '4.4',
     price: '₹549'
   },
   {
-    title: 'Node with React:Fullstack Web Development',
-    name: 'Stephen Grider',
+    title: 'Machine Learning with Python',
+    name: 'Selfcode Academy',
     starrating: '4.1',
     textrating: '4.1',
     price: '₹499'
@@ -45,138 +45,138 @@ const machinelearningdata = [
 
 const pythondata = [
   {
-    title: 'Angular-The Complete Guide 2024',
-    name: 'Maximilian',
+    title: 'The Complete Python Bootcamp',
+    name: 'Jose Portilla',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
 
   },
   {
-    title: 'Angular 8 Certification Training',
-    name: 'Uplatz Training',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'The Moddern Angular Bootcamp',
-    name: 'Stephen Grider',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Angular Front to Back',
-    name: 'Brad Traversey',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  }
-];
-
-const aidata = [
-  {
-    title: 'Next.js 14',
-    name: 'Maximillian',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-
-  },
-  {
-    title: "Next JS From ScraReact JStch",
-    name: 'Stephen Grider',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Next.js by Example',
-    name: 'Mirko Nasato',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'TypeScript & Next.js 14',
-    name: 'Jacob Lower',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  }
-];
-
-const deeplearningdata = [
-  {
-    title: 'Learn and Understand NodeJS',
-    name: 'Anthony',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-
-  },
-  {
-    title: 'Node with React:Fullstack Development',
-    name: 'Stephen Grider',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Node JS:Advanced Concepts',
-    name: 'Pierre-Henry Soria',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  },
-  {
-    title: 'Understanding Node.js:Core Concepts',
-    name: 'Mathiarasan',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-  }
-];
-
-const genaidata = [
-  {
-    title: 'JavaScript-The Complete Guide 2024',
-    name: 'Brad Traversy',
-    starrating: '4.5',
-    textrating: '4.5',
-    price: '₹599'
-
-  },
-  {
-    title: 'JavaScript for Beginners',
+    title: 'Python for beginners',
     name: 'Yassin Marco',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   },
   {
-    title: 'Modern JavaScript',
-    name: 'Jonas',
+    title: 'The Complete Python Developer',
+    name: 'Anderi Neagoie',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹499'
+  },
+  {
+    title: 'Learn Python Programming Masterclass',
+    name: 'Tim Buchalka',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹399'
+  }
+];
+
+const aidata = [
+  {
+    title: 'Artificial Intelligence A-Z 2024',
+    name: 'Luka Anicin',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹599'
+
+  },
+  {
+    title: "Artificial Intelligence for Business",
+    name: 'Kirill Eremenko',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹549'
+  },
+  {
+    title: 'Master in Artificial Intelligence',
+    name: 'Arun Singhal',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹399'
+  },
+  {
+    title: 'Learn Advanced AI for Games',
+    name: 'Penny de Byl',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹499'
+  }
+];
+
+const deeplearningdata = [
+  {
+    title: 'Deep Learning A-Z 2024',
+    name: 'Kirill Eremenko',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹599'
+
+  },
+  {
+    title: 'Deep Learning Mastery',
+    name: 'Raj Chhabria',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹499'
+  },
+  {
+    title: 'Deep Learning with Keras',
+    name: 'Data Weekends',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹549'
+  },
+  {
+    title: 'Deep Learning with TensorFlow 2.0',
+    name: '365 Careers Team',
+    starrating: '5',
+    textrating: '5',
+    price: '₹549'
+  }
+];
+
+const genaidata = [
+  {
+    title: 'Generative AI for Beginners',
+    name: 'Metla sudha Sekhar',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹499'
+
+  },
+  {
+    title: 'Generative AI For Managers and Leaders',
+    name: 'Aakriti E-Learning Academy',
     starrating: '4.5',
     textrating: '4.5',
     price: '₹599'
   },
   {
-    title: 'Master JavaScript from Basics to Advance',
-    name: 'EdYoda',
+    title: 'Generative AI For Beginners',
+    name: 'Jonas',
     starrating: '4.5',
     textrating: '4.5',
-    price: '₹599'
+    price: '₹499'
+  },
+  {
+    title: 'Learn Generative AI in Software Testing',
+    name: 'Rahul Shetty',
+    starrating: '4.5',
+    textrating: '4.5',
+    price: '₹549'
   }
 ];
 
-function Arrow(props) {
+function SampleNextArrow(props) {
   const { className,style, onClick } = props;
   return (
     <div
       className={className}
-     style={{ ...style, display: "block", background: "black",fontSize:'30px' }}
+      style={{ ...style, display:"block",top:'25%',backgroundColor:'black' }} 
       onClick={onClick}
     />
   );
@@ -187,7 +187,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-       style={{ ...style, display: "block", background: "black" }}
+       style={{ ...style, display: "block",top:'25%',backgroundColor:'black'}}
       onClick={onClick}
     />
   );
@@ -201,8 +201,8 @@ function Datasciencetabcontent() {
     speed: 600,
     slidesToShow: 5,
     slidesToScroll: 1,
-    prevArrow: <SamplePrevArrow></SamplePrevArrow>,
-    nextArrow: <Arrow></Arrow>
+    prevArrow: <SamplePrevArrow/>,
+    nextArrow: <SampleNextArrow/>
   };
   var cardsettings = {
     dots: false,
@@ -210,8 +210,8 @@ function Datasciencetabcontent() {
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: <SamplePrevArrow></SamplePrevArrow>,
-    nextArrow: <Arrow></Arrow>
+    prevArrow: <SamplePrevArrow/>,
+    nextArrow: <SampleNextArrow/>
   };
 
   const [activetab, SetActivetab] = useState('Machine Learning')
