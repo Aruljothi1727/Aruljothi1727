@@ -34,6 +34,9 @@ const Uploadfiles = () => {
   const Successpage =() =>{
 navigate('/success')
   }
+  const Assignmentpage =() =>{
+    navigate('/assignments')
+      }
   return(
   <>
 <div style={{margin:'10px',display:'flex', justifyContent:'center', flexDirection:"column",alignItems:"center" }}>
@@ -63,7 +66,7 @@ navigate('/success')
     <Space>
       <Button type='primary' onClick={Successpage}>Submit</Button>
       <Space>
-      <Button type='primary' onClick={navigate('/assignments')}> Cancel</Button>
+      <Button type='primary' onClick={Assignmentpage}> Cancel</Button>
       </Space>
       </Space>
          </div>

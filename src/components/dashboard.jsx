@@ -10,7 +10,7 @@ import fullstackpic from '../asset/fullstack.png';
 import html from '../asset/html_css.png';
 import datascience from '../asset/Picture2.png';
 import python from '../asset/python.png';
-import { autocompleteClasses } from "@mui/material";
+
 
 function Dashboard() {
   const navigatecourse = useNavigate();
